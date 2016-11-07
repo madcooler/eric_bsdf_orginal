@@ -30,6 +30,7 @@ static std::uniform_real_distribution<> dis(0, 1);
 static float generateRandomNumber()
 {
 	return (float)dis(gen);
+//    return 0.4;
 }
 
 

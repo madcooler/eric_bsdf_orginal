@@ -37,4 +37,39 @@ void test_single_scattering()
     delete m;
 }
 
+
+void test_single_scattering_finite()
+{
+    vec3 wi = vec3(2,-3, 6);
+    vec3 wo = vec3(1,3,-7);
+    
+    wi = normalize(wi);
+    wo = normalize(wo);
+    
+    Microsurface * m = new MicrosurfaceDielectric(false,false,0.5,0.5,1.5);
+    
+    const int N = 100000;
+    // eval truncated random walk (loop because eval is stochastic)
+    double V = 0;
+    for(int n=0 ; n<N ; ++n)
+    {
+        V += m->eval(wi, wo, 1) / (double)N;
+    }
+    
+    // eval single (loop because single of diffuse is also stochastic)
+    double V_single = 0;
+    for(int n=0 ; n<N ; ++n)
+    {
+        V_single += m->evalSingleScattering(wi, wo) / (double)N;
+
+    }
+
+    cout << "random␣walk␣cut␣after␣1st␣bounce␣=␣\t" << V << endl;
+    cout << "single␣scattering␣=␣\t" << V_single << endl;
+
+    delete m;
+}
+
+
+
 #endif /* test_single_scattering_h */

@@ -21,6 +21,6 @@ int main(int argc, const char * argv[]) {
     
     //test_masking();
     //test_normalization_bsdf();
-    test_single_scattering();
+    test_single_scattering_finite();
     return 0;
 }

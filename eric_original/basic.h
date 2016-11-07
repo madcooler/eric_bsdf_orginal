@@ -8,6 +8,8 @@
 
 #ifndef basic_h
 #define basic_h
+
+
 #include <random>
 #include "Vector.h"
 #include <iostream>
@@ -30,7 +32,6 @@ inline double getUniformRandomNumber ( double min , double max )
 
 float generateRandomNumber()
 {
-//    return (float)dis(gen);
     return getUniformRandomNumber(0,1);
 }
 
@@ -73,20 +74,24 @@ Microsurface * generateRandomMicrosurface()
     const int material = (int)floor(generateRandomNumber()*3.0);
     switch(material)
     {
-        case 0: m = new MicrosurfaceDiffuse(height_uniform, Beckmann, alpha_x, alpha_y); cout << "Material:␣Diffuse" << endl;
-            break;
+        case 0: m = new MicrosurfaceDiffuse(height_uniform, Beckmann, alpha_x, alpha_y);
+        cout << "Material:␣Diffuse" << endl;
+        break;
 
-        case 1: m = new MicrosurfaceConductor(height_uniform, Beckmann, alpha_x, alpha_y); cout << "Material:␣Conductor" << endl;
+        case 1: m = new MicrosurfaceConductor(height_uniform, Beckmann, alpha_x, alpha_y);
+        cout << "Material:␣Conductor" << endl;
             break;
+            
         default: m = new MicrosurfaceDielectric(height_uniform, Beckmann, alpha_x, alpha_y);
-        
-        cout << "Material:␣Dielectric" << endl; break;
-        cout<<"height␣distribution:␣" << ((height_uniform)?"Uniform":"Gaussian") << endl; cout<<"slope␣distribution:␣" << ((Beckmann)?"Beckmann":"GGX") << endl;
-        cout<<"alpha_x␣=␣" << m->m_microsurfaceslope->m_alpha_x << endl;
-        cout<<"alpha_y␣=␣" << m->m_microsurfaceslope->m_alpha_y << endl;
+        cout << "Material:␣Dielectric" << endl;
+        break;
     }
 
-    
+    cout<<"height␣distribution:␣" << ((height_uniform)?"Uniform":"Gaussian") << endl;
+    cout<<"slope␣distribution:␣" << ((Beckmann)?"Beckmann":"GGX") << endl;
+    cout<<"alpha_x␣=␣" << m->m_microsurfaceslope->m_alpha_x << endl;
+        cout<<"alpha_y␣=␣" << m->m_microsurfaceslope->m_alpha_y << endl;
+
     return m;
 }
 
