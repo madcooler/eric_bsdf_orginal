@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C301CBCF1DD0B7AA00F9545D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C301CBCE1DD0B7AA00F9545D /* main.cpp */; };
+		C301CBDA1DD0B7C600F9545D /* MicrosurfaceScattering.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C301CBD71DD0B7C600F9545D /* MicrosurfaceScattering.cpp */; };
+		C301CBDB1DD0B7C600F9545D /* vec2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C301CBD81DD0B7C600F9545D /* vec2.cpp */; };
+		C301CBDC1DD0B7C600F9545D /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C301CBD91DD0B7C600F9545D /* Vector.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,17 @@
 /* Begin PBXFileReference section */
 		C301CBCB1DD0B7AA00F9545D /* eric_original */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = eric_original; sourceTree = BUILT_PRODUCTS_DIR; };
 		C301CBCE1DD0B7AA00F9545D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C301CBD51DD0B7C600F9545D /* MicrosurfaceScattering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicrosurfaceScattering.h; sourceTree = "<group>"; };
+		C301CBD61DD0B7C600F9545D /* vec2.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = vec2.hpp; sourceTree = "<group>"; };
+		C301CBD71DD0B7C600F9545D /* MicrosurfaceScattering.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MicrosurfaceScattering.cpp; sourceTree = "<group>"; };
+		C301CBD81DD0B7C600F9545D /* vec2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vec2.cpp; sourceTree = "<group>"; };
+		C301CBD91DD0B7C600F9545D /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
+		C301CBDD1DD0B7DA00F9545D /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		C301CBDE1DD0B9F100F9545D /* basic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = basic.h; sourceTree = "<group>"; };
+		C301CBDF1DD0BCCA00F9545D /* test_masking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test_masking.h; sourceTree = "<group>"; };
+		C301CBE01DD0BE3100F9545D /* test_masking_shadowing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test_masking_shadowing.h; sourceTree = "<group>"; };
+		C301CBE21DD0C0AE00F9545D /* test_single_scattering.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test_single_scattering.h; sourceTree = "<group>"; };
+		C301CBE31DD0C19F00F9545D /* test_normalization_bsdf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_normalization_bsdf.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +71,18 @@
 		C301CBCD1DD0B7AA00F9545D /* eric_original */ = {
 			isa = PBXGroup;
 			children = (
+				C301CBE31DD0C19F00F9545D /* test_normalization_bsdf.h */,
+				C301CBD51DD0B7C600F9545D /* MicrosurfaceScattering.h */,
+				C301CBD71DD0B7C600F9545D /* MicrosurfaceScattering.cpp */,
+				C301CBD61DD0B7C600F9545D /* vec2.hpp */,
+				C301CBD81DD0B7C600F9545D /* vec2.cpp */,
+				C301CBDD1DD0B7DA00F9545D /* Vector.h */,
+				C301CBD91DD0B7C600F9545D /* Vector.cpp */,
 				C301CBCE1DD0B7AA00F9545D /* main.cpp */,
+				C301CBDE1DD0B9F100F9545D /* basic.h */,
+				C301CBDF1DD0BCCA00F9545D /* test_masking.h */,
+				C301CBE01DD0BE3100F9545D /* test_masking_shadowing.h */,
+				C301CBE21DD0C0AE00F9545D /* test_single_scattering.h */,
 			);
 			path = eric_original;
 			sourceTree = "<group>";
@@ -119,7 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C301CBDA1DD0B7C600F9545D /* MicrosurfaceScattering.cpp in Sources */,
 				C301CBCF1DD0B7AA00F9545D /* main.cpp in Sources */,
+				C301CBDC1DD0B7C600F9545D /* Vector.cpp in Sources */,
+				C301CBDB1DD0B7C600F9545D /* vec2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
